@@ -11,11 +11,6 @@ def sleep_in(weekday, vacation):
         return False
 
 
-print(sleep_in(False, False))
-print(sleep_in(True, False))
-print(sleep_in(False, True))
-
-
 # diff21
 
 def diff21(n):
@@ -23,11 +18,6 @@ def diff21(n):
         return 2 * abs(n - 21)
     else:
         return abs(n - 21)
-
-
-print(diff21(19))
-print(diff21(10))
-print(diff21(21))
 
 
 # near_hundred
@@ -39,31 +29,17 @@ def near_hundred(n):
         return True
 
 
-print(near_hundred(93))
-print(near_hundred(90))
-print(near_hundred(89))
-
-
 # missing_char
 
 def missing_char(str, n):  # Shadow built-in name warning
     return str[:n] + str[n + 1:]
 
 
-print(missing_char('kitten', 1))
-print(missing_char('kitten', 0))
-print(missing_char('kitten', 4))
-
-
 # monkey_trouble
+
 
 def monkey_trouble(a_smile, b_smile):
     return a_smile == b_smile
-
-
-print(monkey_trouble(True, True))
-print(monkey_trouble(False, False))
-print(monkey_trouble(True, False))
 
 
 # parrot_trouble
@@ -75,6 +51,55 @@ def parrot_trouble(talking, hour):
         return False
 
 
-print(parrot_trouble(True, 6))
-print(parrot_trouble(True, 7))
-print(parrot_trouble(False, 6))
+# pos_neg
+
+
+def pos_neg(a, b, negative):
+    if (a * b < 0) and not negative:
+        return True
+    elif a < 0 and b < 0 and negative:
+        return True
+    else:
+        return False
+
+
+# front_back
+
+def front_back(str):
+    n = len(str)
+    if n > 1:
+        return str[-1] + str[1:-1] + str[0]
+    else:
+        return str
+
+    # sum_double
+
+def sum_double(a, b):
+    if a == b:
+        return 4 * a
+    else:
+        return a + b
+
+
+# makes_ten
+
+def makes10(a, b):
+    if a == 10 or b == 10 or a + b == 10:
+        return True
+    else:
+        return False
+
+
+# not_string
+
+def not_string(str):
+    if str[0:3] == "not":
+        return str
+    else:
+        return "not" + " " + str
+
+
+# front3
+
+def front3(str):
+    return 3 * str[0:3]
